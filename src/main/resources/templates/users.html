@@ -1,0 +1,17 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Datos</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<div th:each="user: ${users}">
+    <p th:text="${user.email}"/>
+    <ul>
+        <li th:each="book: ${user.books}">
+        <label th:text="${book.title}"/>
+        </li>
+    </ul>
+</div>
+</body>
+</html>
